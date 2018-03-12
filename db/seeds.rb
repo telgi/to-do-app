@@ -6,6 +6,8 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+User.create(username: 'telgi', password: 'scooby')
+
 Task.create([
   {title: "Drop it like it's hot", details: "This shit is lit!"},
   {title: "Go to bed", details: "Sleepy times"},
