@@ -39,9 +39,15 @@ class TasksController < ApplicationController
     redirect_to tasks_path
   end
 
+  def complete
+    @task = Task.find(params[:id])
+    @task.update_attribute(:completed, params[:completed])
+    redirect_back(fallback_location: root_path)
+  end
+
   private
   # whitelisting parameters
   def task_params
-    params.require(:task).permit(:title, :details)
+    params.require(:task).permit(:title, :details, :completed)
   end
 end
