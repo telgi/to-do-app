@@ -1,12 +1,10 @@
-<h1>Tasks#index</h1>
+<h1>To-Do List</h1>
 <p>Tasks go here:</p>
 
 <ul>
   <% @tasks.each do |task| %>
     <li>
-      <h3><strong><%= task.title %></strong></h3>
-      <p><em><%= task.details %></em></p>
-      <%= link_to 'Edit Task', edit_task_path(task) %>
+      <strong><%= link_to task.title, task_path(task) %></strong>
     </li>
   <% end %>
 </ul>
