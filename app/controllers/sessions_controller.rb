@@ -7,14 +7,15 @@ class SessionsController < ApplicationController
     if user && user.authenticate(params[:password])
       p session
       session[:user_id] = user.id
-      redirect_to :tasks
+      redirect_to :tasks, notice: "Login Successful"
     else
+      flash.alert = "Login Failed"
       render 'new'
     end
   end
 
   def destroy
     session[:user_id] = nil
-    redirect_to root_path
+    redirect_to root_path, notice: "Logged Out. Goodbye."
   end
 end
