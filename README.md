@@ -1,24 +1,19 @@
-# README
+# To-Do List
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+An application for users to add tasks to their to-do list with the ability to complete a task, edit a task, or delete a task.
 
-Things you may want to cover:
+## Installation
 
-* Ruby version
+`git clone path-to-your-repo`
 
-* System dependencies
+`bundle install`
 
-* Configuration
+## Usage
 
-* Database creation
+`bin/rails server`
 
-* Database initialization
+Navigate to `http://localhost:3000/`
 
-* How to run the test suite
+## Running tests
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+`rspec`
